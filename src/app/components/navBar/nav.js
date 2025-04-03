@@ -96,7 +96,7 @@ export default function NavBar() {
       {/* Desktop Navigation - Always visible unless hidden by keyboard */}
       <div 
   ref={navRef}
-  className={`fixed top-0 mt-1 flex justify-between items-center w-full left-1/2 -translate-x-1/2 transition-transform duration-300 ${
+  className={`fixed md:block hidden top-0 mt-1 flex justify-between items-center w-full left-1/2 -translate-x-1/2 transition-transform duration-300 ${
     isNavVisible ? "translate-y-0" : "-translate-y-full"
   } z-20 px-4`}
   onFocus={handleNavFocus}
@@ -221,7 +221,7 @@ export default function NavBar() {
         
         <a href={routes.home} onClick={handleMobileLinkClick} className="block">
           <img
-            src="/minimalistlogo.jpeg"
+            src="../../minimalistlogo.jpeg"
             alt="NovaEdge Media's logo"
             className="rounded-full w-20 h-20 mx-auto border-3 mt-16"
             style={{ borderColor: "#1e283b" }}
