@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .scroll-container {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;     /* Firefox */
+    }
+  
+    .scroll-container::-webkit-scrollbar {
+      display: none;             /* WebKit browsers */
+    }
+  }
+  
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    background-image: no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  @media (min-width: 767px) {
+    #header {
+        height: calc(100vh - 2.2vh);
+    }
+  }
+  
+  @media (max-width: 767.9px) {
+    #header {
+        height: 100vh;
+        padding-left: 16px; 
+        padding-right: 16px;
+    }
+  }
+  
+  @media (min-width: 1800px) {
+    #header {
+        height: calc(100vh - 1vh);
+    }
+  }
+  
+  @media (min-width: 1800px) {
+    #headerButtonDiv {
+      width: 19%;
+    }
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1799.9px) {
+    #headerButtonDiv {
+      width: 25%;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199.9px) {
+    #headerButtonDiv {
+      width: 47%;
+    }
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .headerCardSize {
+    height: 70vh
+  } 
+  @keyframes levitate {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+  } 
+  .levitate {
+    animation: levitate 3s ease-in-out infinite;
+  }
+}
