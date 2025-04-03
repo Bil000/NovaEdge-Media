@@ -201,7 +201,7 @@ export default function NavBar() {
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 bg-black bg-opacity-50 z-50"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
@@ -284,7 +284,7 @@ export default function NavBar() {
       {/* Mobile Toggle Button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="md:hidden fixed top-4 left-4 p-4 rounded z-50"
+        className="md:hidden fixed top-4 left-4 p-4 rounded z-40"
         style={{ backgroundColor: "#0e131c" }}
         aria-label="Toggle menu"
         aria-expanded={isSidebarOpen}
