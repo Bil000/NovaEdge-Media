@@ -96,7 +96,7 @@ export default function NavBar() {
       {/* Desktop Navigation - Always visible unless hidden by keyboard */}
       <div 
   ref={navRef}
-  className={`fixed md:block hidden top-0 mt-1 flex justify-between items-center w-full left-1/2 -translate-x-1/2 transition-transform duration-300 ${
+  className={`fixed top-0 flex items-center w-full left-1/2 -translate-x-1/2 transition-transform duration-300 ${
     isNavVisible ? "translate-y-0" : "-translate-y-full"
   } z-20 px-4`}
   onFocus={handleNavFocus}
@@ -108,7 +108,7 @@ export default function NavBar() {
     <img
       src="/android-chrome-512x512.png"
       alt="NovaEdge Media's logo"
-      className="rounded-full w-12 h-12 border-3"
+      className="rounded-full md:block hidden w-12 h-12 border-3"
       style={{ borderColor: "#1e283b" }}
     />
   </a>
@@ -171,7 +171,7 @@ export default function NavBar() {
     </ul>
   </nav>
     <button 
-      className="bg-white text-black w-[7.5em] px-1 py-2 text-sm font-semibold rounded-full border hover:border-yellow-500 hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+      className="bg-white md:block hidden text-black w-[7.5em] px-1 py-2 text-sm font-semibold rounded-full border hover:border-yellow-500 hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
     >
       <a href="#">Get Started</a>
     </button>
@@ -183,7 +183,7 @@ export default function NavBar() {
         <button
           onClick={handleToggleClick}
           onMouseEnter={() => setIsNavVisible(true)}
-          className="fixed top-0 left-1/2 transform -translate-x-1/2 p-2 bg-[#0e131c] border-2 border-t-0 border-[#1e283b] rounded-b-lg z-20 hover:bg-[#1e283b] transition-colors"
+          className="fixed md:block hidden  top-0 left-1/2 transform -translate-x-1/2 p-2 bg-[#0e131c] border-2 border-t-0 border-[#1e283b] rounded-b-lg z-20 hover:bg-[#1e283b] transition-colors"
           aria-label={isNavVisible ? 'Hide navigation' : 'Show navigation'}
         >
           <svg
@@ -221,7 +221,7 @@ export default function NavBar() {
         
         <a href={routes.home} onClick={handleMobileLinkClick} className="block">
           <img
-            src="../../minimalistlogo.jpeg"
+            src="/minimalistlogo.jpeg"
             alt="NovaEdge Media's logo"
             className="rounded-full w-20 h-20 mx-auto border-3 mt-16"
             style={{ borderColor: "#1e283b" }}
