@@ -32,13 +32,7 @@ const Testimonials = () => {
         className="relative flex flex-wrap justify-center gap-6 px-6"
       >
         {/* Card 1 */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
-        >
+        <div className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
           <div className="flex items-center mb-4">
             <img
               src="../../testimonial4.jpg"
@@ -53,15 +47,18 @@ const Testimonials = () => {
           <p className="text-gray-300 italic">
             "NovaEdge Media changed our digital campaigns. Our ROI increased by 35% in the first month. Managing ads is now easier than ever."
           </p>
-        </motion.div>
+        </div>
+        <style>
+          {`
+            @media (max-width: 871.9px) {
+                #card2 {
+                  margin-bottom: 5rem;
+                }
+              }   
+          `}
+        </style>
         {/* Card 2 */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform translate-y-10 transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
-        >
+        <div id="card2" className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform translate-y-10 transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
           <div className="flex items-center mb-4">
             <img
               src="../../testimonial3.jpg"
@@ -76,13 +73,9 @@ const Testimonials = () => {
           <p className="text-gray-300 italic">
             "NovaEdge Media simplified our ad management process. It’s a game changer. It saves us time and boosts performance."
           </p>
-        </motion.div>
+        </div>
         {/* Card 3 */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
         >
           <div className="flex items-center mb-4">
@@ -99,13 +92,9 @@ const Testimonials = () => {
           <p className="text-gray-300 italic">
             "With NovaEdge Media, our targeting got much better. We saw a 50% increase in conversions. Now, our ads reach our audience directly."
           </p>
-        </motion.div>
+        </div>
         {/* Card 4 */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="relative bg-gray-800 p-6 rounded-lg shadow-xl w-80 sm:w-96 transform translate-y-10 transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
         >
           <div className="flex items-center mb-4">
@@ -122,7 +111,7 @@ const Testimonials = () => {
           <p className="text-gray-300 italic">
             "Our marketing changed after we integrated NovaEdge Media. It automated our campaigns and gave us insights that led to success."
           </p>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );

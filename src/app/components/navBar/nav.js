@@ -104,20 +104,20 @@ export default function NavBar() {
   tabIndex="0"
 >
   {/* Left edge - Logo */}
-  <a href={routes.home} className="flex-shrink-0">
+  <a href={routes.home} className="mt-3 w-24 h-12 flex-shrink-0">
     <img
-      src="/android-chrome-512x512.png"
+      src="../../Nav_logo.png"
       alt="NovaEdge Media's logo"
-      className="rounded-full md:block hidden w-12 h-12 border-3"
+      className="md:block object-contain hidden border-3"
       style={{ borderColor: "#1e283b" }}
     />
   </a>
 
   {/* Center - Navigation */}
-  <nav className="hidden md:flex items-center  justify-center flex-grow">
+  <nav className="hidden md:flex mt-3 items-center  justify-center flex-grow">
     <style>{`li { opacity: 1; display: flex; align-items: center; }`}</style>
     
-    <ul className="flex justify-evenly items-center w-56 p-[6px] border-2"
+    <ul className="flex justify-evenly items-center w-[25rem] p-[6px] border-2"
         style={{ backgroundColor: "rgba(14, 19, 28, 0.7)", borderColor: "#1e283b", borderRadius: "5px 0 0 5px" }}>
       <li className="relative"
           onMouseEnter={() => setIsProductOpen(true)}
@@ -136,20 +136,7 @@ export default function NavBar() {
         </button>
         {isProductOpen && <DesktopDropdown items={routes.product} />}
       </li>
-      <li><a href={routes.about} className="text-lg">About</a></li>
-    </ul>
-
-    <a href={routes.home}>
-      <img
-        src="/android-chrome-512x512.png"
-        alt="NovaEdge Media's logo"
-        className="rounded-full w-12 h-12 mx-5 border-3"
-        style={{ borderColor: "#1e283b" }}
-      />
-    </a>
-
-    <ul className="flex justify-evenly w-56 p-[6px] border-2"
-        style={{ backgroundColor: "rgba(14, 19, 28, 0.7)", borderColor: "#1e283b", borderRadius: "0 5px 5px 0" }}>
+      <li><a href={routes.about} className="text-lg">Company</a></li>
       <li><a href={routes.pricing} className="text-lg">Pricing</a></li>
       <li className="relative"
           onMouseEnter={() => setIsResourcesOpen(true)}
@@ -198,32 +185,34 @@ export default function NavBar() {
         </button>
       )}
 
-      {/* Mobile Sidebar Overlay */}
-      {isSidebarOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-50"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
+        {/* Overlay (behind sidebar) */}
+        {isSidebarOpen && (
+          <div 
+            className="fixed inset-0 bg-black/50 z-30"  // Lower z-index than sidebar
+            onClick={() => setIsSidebarOpen(false)}
+          />
+        )}
 
-      {/* Mobile Sidebar */}
-      <div className={`${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
-          md:hidden fixed top-0 left-0 w-full h-screen text-white p-4 transition-transform duration-300 border-2 z-40 overflow-y-auto`}
-          style={{ backgroundColor: "#0e131c", borderColor: "#1e283b" }}>
+        {/* Mobile Sidebar (front layer) */}
+        <div 
+          className={`${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
+            fixed top-0 left-0 w-full h-screen text-white p-4 transition-transform duration-300 
+            z-40 pointer-events-auto overflow-y-auto`}
+          style={{ backgroundColor: "#0e131c", border: "2px solid #1e283b" }}
+        >
         
         <button 
           onClick={() => setIsSidebarOpen(false)} 
           className="absolute top-4 right-4 text-2xl"
-          aria-label="Close menu"
         >
           ✖
         </button>
         
-        <a href={routes.home} onClick={handleMobileLinkClick} className="block">
+        <a href={routes.home} onClick={handleMobileLinkClick} className="my-16 block  w-[14rem] h-[4rem] flex-shrink-0">
           <img
-            src="/minimalistlogo.jpeg"
+            src="../../Nav_logo.png"
             alt="NovaEdge Media's logo"
-            className="rounded-full w-20 h-20 mx-auto border-3 mt-16"
+            className="object-cover border-3"
             style={{ borderColor: "#1e283b" }}
           />
         </a>
@@ -250,7 +239,7 @@ export default function NavBar() {
           
           <li className="w-full">
             <a href={routes.about} onClick={handleMobileLinkClick} className="block p-4 hover:bg-gray-700 w-full rounded">
-              About
+              Company
             </a>
           </li>
           
@@ -284,10 +273,8 @@ export default function NavBar() {
       {/* Mobile Toggle Button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="md:hidden fixed top-4 left-4 p-4 rounded z-40"
+        className="md:hidden fixed top-4 left-4 p-4 rounded z-20"
         style={{ backgroundColor: "#0e131c" }}
-        aria-label="Toggle menu"
-        aria-expanded={isSidebarOpen}
       >
         ☰
       </button>

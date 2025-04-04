@@ -45,7 +45,7 @@ export default function HeroSection({ tagline, subtext }) {
            >     
             <div id="headerButtonDiv" className="mx-auto flex items-center md:justify-around flex-col md:flex-row">
                 <button 
-                className="bg-white text-black w-[9.6em] px-6 py-2 text-base font-semibold rounded-full border hover:border-yellow-500 hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+                className="bg-white md:mb-0 mb-4 text-black w-[9.6em] px-6 py-2 text-base font-semibold rounded-full border hover:border-yellow-500 hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
                 >
                   <a href="#">Get Started</a>
                 </button>

@@ -80,12 +80,8 @@ const Integrations = () => {
         >
           <div className="grid md:grid-cols-3 gap-8 mt-10">
             {integrations.map((integration) => (
-              <motion.div
+              <div
                 key={integration.name}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
                 className={`p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-all duration-300 group ${integration.bgColor}`}
               >
                 {integration.logo}
@@ -93,7 +89,7 @@ const Integrations = () => {
                 <p className="text-sm font-semibold mt-3 max-w-xs leading-relaxed">
                   {integration.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </motion.div>

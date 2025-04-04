@@ -28,73 +28,49 @@ const HowItWorks = () => {
         className="flex flex-wrap justify-center items-center gap-6 mt-10"
       >
         {/* Step 1: Sign Up */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60"
-        >
+        <div className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60">
           <FontAwesomeIcon icon={faUserPlus} className="text-white text-5xl mb-4" />
           <h3 className="font-semibold text-2xl mb-2">Sign Up</h3>
           <p className="text-sm font-semibold mt-3 max-w-xs leading-relaxed">
             Create your account choose a plan and get instant access to NovaEdge Media.
           </p>
-        </motion.div>
+        </div>
 
         {/* Arrow */}
         <FontAwesomeIcon icon={faArrowRight} className="text-gray-500 text-3xl hidden xl:block" />
 
         {/* Step 2: Set Up Campaigns */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-green-400 to-blue-500 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60"
-        >
+        <div className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-green-400 to-blue-500 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60">
           <FontAwesomeIcon icon={faBullhorn} className="text-white text-5xl mb-4" />
           <h3 className="font-semibold text-2xl mb-2">Set Up</h3>
           <p className="text-sm font-semibold mt-3 max-w-xs leading-relaxed">
             Define your ad campaign details, audience, and content preferences.
           </p>
-        </motion.div>
+        </div>
 
         {/* Arrow */}
         <FontAwesomeIcon icon={faArrowRight} className="text-gray-500 text-3xl hidden xl:block" />
 
         {/* Step 3: AI Optimization */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-pink-500 to-red-600 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60"
-        >
+        <div className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-pink-500 to-red-600 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60">
           <FontAwesomeIcon icon={faMagic} className="text-white text-5xl mb-4" />
           <h3 className="font-semibold text-2xl mb-2">AI Optimization</h3>
           <p className="text-sm font-semibold mt-3 max-w-xs leading-relaxed">
             Let NovaEdge AI optimize your campaigns for higher conversions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Arrow */}
         <FontAwesomeIcon icon={faArrowRight} className="text-gray-500 text-3xl hidden xl:block" />
 
         {/* Step 4: Get Results */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-yellow-400 to-orange-500 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60"
-        >
+        <div className="h-[16em] w-[17em] flex justify-center items-center flex-col bg-gradient-to-r from-yellow-400 to-orange-500 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all text-center w-60">
           <FontAwesomeIcon icon={faChartLine} className="text-white text-5xl mb-4" />
           <h3 className="font-semibold text-2xl mb-2">Get Results</h3>
           <p className="text-sm font-semibold mt-3 max-w-xs leading-relaxed">
             Get real-time insights and campaign adjustments to maximize ROI.
           </p>
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* CTA Section */}
