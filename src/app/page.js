@@ -14,7 +14,7 @@ import Footer from "./components/footer/footer";
 export default function Home() {
   return (
     <>
-      <header id="header" className="w-full flex-col flex relative justify-center md:rounded-3xl md:mb-2 xl:mb-4" style={{backgroundImage: "url(./headergif.gif)", backgroundSize: "cover"}}>
+      <header id="header" className="w-full flex-col flex relative justify-center md:rounded-3xl bg-cover md:mb-2 xl:mb-4" style={{backgroundImage: "url(./headergif.gif)", backgroundSize: "cover"}}>
         <NavBar />
         <HeroSection tagline={"TRADITIONAL MARKETING IS HISTORY\nA NEW ERA HAS BEGUN"} 
                      subtext={"Revolutionize Marketing with the AI that Redefines Industry Standards"} 
