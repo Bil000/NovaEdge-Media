@@ -9,7 +9,14 @@ export const routes = {
       ReportsAndAnalytics: "/product/ReportsAndAnalytics",
       seamlessWebsiteIntegration: "/product/seamlessWebsiteIntegration",
     },
-    about: "/about",
+    footer: {
+      company: "/company",
+      terms: "/terms",
+      privacyPolicy: "/pricacyPolicy",
+      licensing: "/licensing",
+      contact:  "/contact"
+    
+    },
     resources: {
     },
     pricing: "/pricing",

@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-export default function FeatureSection ({features}) {
+export default function FeatureSection ({features, title, subtitle}) {
+  const defaultTitle = "What Does It Do?";
+  const defaultSubtitle = "Discover The Features Designated To\nMake Your Marketing Awesome";
   return (
     <>
       <style jsx>{`
@@ -20,12 +22,14 @@ export default function FeatureSection ({features}) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
         >
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
-                      What Does It Do?
-                  </h2>
-                  <h2 className="text-lg sm:text-xl md:text-2xl whitespace-pre-wrap font-semibold text-center mb-8">
-                      {'Discover The Features Designated To\nMake Your Marketing Awesome'}
-                  </h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6">
+          {title || defaultTitle}
+        </h2>
+
+        {/* Subtitle with JSX or text support */}
+        <p className="text-lg sm:text-xl md:text-2xl whitespace-pre-line font-semibold text-center mb-8">
+          {subtitle ? subtitle : defaultSubtitle}
+        </p>
         </motion.div>    
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {features.map((feature, index) => {
@@ -88,10 +92,10 @@ export default function FeatureSection ({features}) {
                 {/* Fixed Header */}
                 <div className=" w-[80%] sticky mx-auto top-[25vh] py-20 px-4 md:px-8 lg:px-16">
                   <h2 className="text-3xl text-blue-900 sm:text-4xl md:text-5xl font-bold text-center mb-6">
-                      What Does It Do?
+                  {title || defaultTitle}
                   </h2>
                   <h2 className="text-lg text-gray-600 sm:text-xl md:text-2xl whitespace-pre-wrap font-semibold text-center mb-8">
-                      {'Discover The Features Designated To\nMake Your Marketing Awesome'}
+                  {subtitle ? subtitle : defaultSubtitle}
                   </h2>
                   <div className="mx-auto md:w-[60%] lg:w-full flex flex-col md:flex-row items-center justify-center gap-4">
                     <button className="bg-yellow-400 text-gray-900 px-4 py-2 text-md font-semibold rounded-full hover:bg-yellow-500 transition-all duration-300 hover:shadow-2xl transform hover:scale-105 w-34">

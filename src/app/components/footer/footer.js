@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { routes } from "@/app/routes";
 import {
   faLinkedin,
   faFacebook,
@@ -59,27 +60,27 @@ const Footer = () => {
             <h5 className="text-xl font-semibold mb-4">Quick Links</h5>
             <ul className="space-y-2 text-left md:text-center w-full">
               <li className="w-full">
-                <a href="/about" className="block w-full hover:text-blue-400">
-                  About
+                <a href={routes.footer.company} className="block w-full hover:text-blue-400">
+                    Company
                 </a>
               </li>
               <li className="w-full">
-                <a href="/terms" className="block w-full hover:text-blue-400">
+                <a href={routes.footer.terms} className="block w-full hover:text-blue-400">
                   Terms
                 </a>
               </li>
               <li className="w-full">
-                <a href="/privacy" className="block w-full hover:text-blue-400">
+                <a href={routes.footer.privacyPolicy} className="block w-full hover:text-blue-400">
                   Privacy Policy
                 </a>
               </li>
               <li className="w-full">
-                <a href="/licensing" className="block w-full hover:text-blue-400">
+                <a href={routes.footer.licensing} className="block w-full hover:text-blue-400">
                   Licensing
                 </a>
               </li>
               <li className="w-full">
-                <a href="/contact" className="block w-full hover:text-blue-400">
+                <a href={routes.footer.contact} className="block w-full hover:text-blue-400">
                   Contact
                 </a>
               </li>

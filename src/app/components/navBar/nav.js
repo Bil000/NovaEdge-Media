@@ -136,7 +136,7 @@ export default function NavBar() {
         </button>
         {isProductOpen && <DesktopDropdown items={routes.product} />}
       </li>
-      <li><a href={routes.about} className="text-lg">Company</a></li>
+      <li><a href={routes.footer.company} className="text-lg">Company</a></li>
       <li><a href={routes.pricing} className="text-lg">Pricing</a></li>
       <li className="relative"
           onMouseEnter={() => setIsResourcesOpen(true)}
@@ -238,7 +238,7 @@ export default function NavBar() {
           </li>
           
           <li className="w-full">
-            <a href={routes.about} onClick={handleMobileLinkClick} className="block p-4 hover:bg-gray-700 w-full rounded">
+            <a href={routes.footer.company} onClick={handleMobileLinkClick} className="block p-4 hover:bg-gray-700 w-full rounded">
               Company
             </a>
           </li>
