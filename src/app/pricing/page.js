@@ -474,13 +474,12 @@ export default function Home() {
             </table>
            </motion.div>
           </div>
-          <div className=" mx-auto md:w-[50%] lg:w-[43%] mt-12 flex items-center md:justify-around flex-col md:flex-row">
+          <div className="mx-auto mt-12 mb-6 flex items-center justify-center flex-col md:flex-row">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-8"
             >  
             <button
               className="bg-yellow-400 mb-4 md:mb-0 shadow-md shadow-yellow-900 w-[9.5em] text-gray-900 px-6 py-3 text-lg font-semibold rounded-full hover:bg-yellow-500 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 w-[300px]"  // Fixed width using Tailwind
@@ -488,12 +487,12 @@ export default function Home() {
               <a href="#">Get Started</a>
             </button>
             </motion.div>
+            <div className="w-4 px-2"></div>
             <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
           >
             <button
               className="bg-blue-800 shadow-lg w-[9.5em] px-6 py-3 text-lg font-semibold rounded-full hover:bg-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 w-[300px]"  // Fixed width using Tailwind
@@ -501,7 +500,7 @@ export default function Home() {
               <a href="#">Book a Demo</a>
             </button>
             </motion.div>
-          </div>
+      </div>
         </section>
         <FAQ />
         <Testimonials />

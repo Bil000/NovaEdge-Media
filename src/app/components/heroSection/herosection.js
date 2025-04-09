@@ -43,12 +43,13 @@ export default function HeroSection({ tagline, subtext }) {
             viewport={{ once: true }}
             className="w-full flex flex-col items-center justify-center"
            >     
-            <div id="headerButtonDiv" className="mx-auto flex items-center md:justify-around flex-col md:flex-row">
+            <div className=" mx-auto flex items-center md:justify-around flex-col md:flex-row">
                 <button 
                 className="bg-white md:mb-0 mb-4 text-black w-[9.6em] px-6 py-2 text-base font-semibold rounded-full border hover:border-yellow-500 hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
                 >
                   <a href="#">Get Started</a>
                 </button>
+                    <div className="w-4 px-2"></div>
                 <button
                 className="bg-transparent border border-white mb-4 md:mb-0 w-[9.6em] px-6 py-2 text-base font-semibold rounded-full hover:border-blue-700 hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
                 >           

@@ -14,11 +14,30 @@ import Footer from "./components/footer/footer";
 export default function Home() {
   return (
     <>
-      <header id="header" className="w-full flex-col flex relative justify-center md:rounded-3xl bg-cover md:mb-2 xl:mb-4" style={{backgroundImage: "url(./headergif.gif)", backgroundSize: "cover"}}>
-        <NavBar />
-        <HeroSection tagline={"TRADITIONAL MARKETING IS HISTORY\nA NEW ERA HAS BEGUN"} 
-                     subtext={"Revolutionize Marketing with the AI that Redefines Industry Standards"} 
-                     CTA="Book a Demo" />
+      <header
+        id="header"
+        className="w-full flex-col flex relative justify-center md:rounded-3xl md:mb-2 xl:mb-4 overflow-hidden"
+      >
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="https://ik.imagekit.io/jvlxz1ebk/lv_0_20250409122825.mp4?updatedAt=1744212930670"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        ></video>
+
+        {/* Content on top of video */}
+        <div className="relative z-10">
+          <NavBar />
+          <HeroSection
+            tagline={"TRADITIONAL MARKETING IS HISTORY\nA NEW ERA HAS BEGUN"}
+            subtext={"Revolutionize Marketing with the AI that Redefines Industry Standards"}
+            CTA="Book a Demo"
+          />
+        </div>
       </header>
       <main className="w-full">
         <NovaEdgeStats />
