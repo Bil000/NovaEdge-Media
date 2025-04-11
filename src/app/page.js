@@ -21,7 +21,7 @@ export default function Home() {
         {/* Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://ik.imagekit.io/jvlxz1ebk/Utool-20250410-190629155.mp4?updatedAt=1744323784739"
+          src="https://asset.cloudinary.com/dytmmuosl/7adebc03ef123b6dcf17a78eca7d2b2f"
           autoPlay
           muted
           loop
