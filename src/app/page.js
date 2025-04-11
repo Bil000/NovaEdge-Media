@@ -21,7 +21,7 @@ export default function Home() {
         {/* Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://asset.cloudinary.com/dytmmuosl/7adebc03ef123b6dcf17a78eca7d2b2f"
+          src="https://res.cloudinary.com/dytmmuosl/video/upload/v1744331302/cnquverzbpdf5myry8on.mp4"
           autoPlay
           muted
           loop
