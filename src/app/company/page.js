@@ -2,7 +2,6 @@
 import NavBar from "@components/navBar/nav";
 import Footer from "@components/footer/footer";
 import CTASection from "@components/finalCTA/finalCTA";
-import Testimonials from "@/app/components/testimonials/testimonials";
 import FeatureSection from "@/app/components/featuresSection/featuresSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faLightbulb, faBullseye, faBrain, faRocket, faGlobe, faRobot, faPaintBrush, faCogs, faChartLine, faBolt, faShieldAlt, faStarAndCrescent, faFilePen, faChartSimple, faMoneyBill1Wave  } from "@fortawesome/free-solid-svg-icons";

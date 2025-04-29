@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <section className="px-4 py-16 bg-gray-900 text-center text-white relative">
+    <section id="testimonials" className="px-4 py-16 bg-gray-900 text-center text-white relative">
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
