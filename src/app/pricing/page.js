@@ -68,11 +68,8 @@ export default function Home() {
         }
         `}
       </style>
-      <motion.div 
+      <div 
             className="absolute top-0 left-0 w-full h-full bg-[url('/future_city1.jpg')] bg-cover bg-fixed opacity-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.2 }}
-            transition={{ duration: 1.5 }}
             style={{ zIndex: -1 }}
           />
       <div className="w-full" style={{ zIndex: 1 }}>
