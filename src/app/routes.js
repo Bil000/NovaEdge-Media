@@ -18,6 +18,10 @@ export const routes = {
     
     },
     resources: {
+      gettingStarted: "/resources/gettingstarted",
+      blog: "/resources/blog",
+      caseStudies: "/resources/caseStudies",
+      knowledgeBase: "/resources/knowledgeBase",
     },
     pricing: "/pricing",
   };

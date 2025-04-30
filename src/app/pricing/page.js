@@ -68,13 +68,13 @@ export default function Home() {
         }
         `}
       </style>
+      <NavBar />
       <div 
-            className="absolute top-0 left-0 w-full h-full bg-[url('/future_city1.jpg')] bg-cover bg-fixed opacity-20"
+            className="absolute top-0 left-0 w-full h-full bg-[url('https://res.cloudinary.com/dytmmuosl/image/upload/v1746004498/phf3zx9l2owzb4rnqw3q.jpg')] bg-cover bg-fixed opacity-20"
             style={{ zIndex: -1 }}
           />
       <div className="w-full" style={{ zIndex: 1 }}>
           <header className="headerCardSize w-full flex-col flex relative content-center justify-center">
-            <NavBar />
             <HeroSection tagline={"STRAIGHTFORWARD PRICES\n&\nPOWERFUL RESULTS"}  
                         subtext={"Get The Tools You Need To Elevate Your Marketing\nNo Hidden Fees, No Surprises. See Our Plans"} 
             />
