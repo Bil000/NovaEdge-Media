@@ -2,12 +2,12 @@
 export const routes = {
     home: "/",
     product: {
-      smartCampaigns: "/product/smartCampaigns", // Specific subpage
+      SmartCampaigns: "/product/smartCampaigns", // Specific subpage
       AiContentCreation: "/product/AiContentCreation",
-      marketingHelper: "/product/marketingHelper",  
-      deepAudienceInsights: "/product/deepAudienceInsights",
+      MarketingHelper: "/product/marketingHelper",  
+      DeepAudienceInsights: "/product/deepAudienceInsights",
       ReportsAndAnalytics: "/product/ReportsAndAnalytics",
-      seamlessWebsiteIntegration: "/product/seamlessWebsiteIntegration",
+      SeamlessWebsiteIntegration: "/product/seamlessWebsiteIntegration",
     },
     footer: {
       company: "/company",
@@ -18,10 +18,10 @@ export const routes = {
     
     },
     resources: {
-      gettingStarted: "/resources/gettingstarted",
-      blog: "/resources/blog",
-      caseStudies: "/resources/caseStudies",
-      knowledgeBase: "/resources/knowledgeBase",
+      GettingStarted: "/resources/gettingstarted",
+      Blog: "/resources/blog",
+      CaseStudies: "/resources/caseStudies",
+      KnowledgeBase: "/resources/knowledgeBase",
     },
     pricing: "/pricing",
   };

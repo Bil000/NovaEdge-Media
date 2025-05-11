@@ -30,7 +30,7 @@ const FAQ = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="border-b border-gray-300">
+             <div className="border-b border-gray-300">
                 <button
                   onClick={() => toggleQuestion(index)}
                   className="w-full text-left py-4 px-6 text-lg sm:text-xl md:text-2xl font-medium flex relative items-center transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"

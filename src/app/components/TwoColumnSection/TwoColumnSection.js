@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 const TwoColumnCard = ({
   title,
   highlightedText,
@@ -11,8 +12,29 @@ const TwoColumnCard = ({
   buttonLink,
   imageSrc,
   imageAlt,
+  proTipText,
+  dropdownId,
+  arrowId,
+  isHidden = true,
   reverseLayout = false
 }) => {
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(!open);
+    const dropdown = document.getElementById(dropdownId);
+    const arrow = document.getElementById(arrowId);
+    if (open) {
+      dropdown.classList.remove("max-h-96", "opacity-100", "py-2", "px-6");
+      dropdown.classList.add("max-h-0", "opacity-0", "py-0", "px-0");
+      arrow.classList.remove("rotate-0");
+      arrow.classList.add("rotate-180");
+    } else {  
+      dropdown.classList.remove("max-h-0", "opacity-0", "py-0", "px-0");
+      dropdown.classList.add("max-h-96", "opacity-100", "py-2", "px-6");
+      arrow.classList.remove("rotate-180");
+      arrow.classList.add("rotate-0");
+    }
+  }
   return (
     <div className={`w-full flex flex-col xl:mx-[100px] lg:flex-row ${reverseLayout ? 'lg:flex-row-reverse' : ''} justify-evenly xl:justify-center text-left mb-16`}>
       {/* Text Content */}
@@ -47,10 +69,47 @@ const TwoColumnCard = ({
           {features.map((feature, index) => (
             <li key={index} className="flex items-center transition-all duration-300 hover:translate-x-2">
               <FontAwesomeIcon icon={faSquareCheck} className="text-xl text-blue-600 pr-3" />
-              <p >{feature}</p>
+              <p className='whitespace-pre-wrap'>{feature}</p>
             </li>
           ))}
         </ul>
+        </motion.div>
+        <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className={`text-gray-700 ${isHidden ? 'hidden' : ''}`}
+         >
+          <div className="border-b border-gray-300">
+            <button
+              onClick={handleClick}
+              className="w-full text-left py-4 pr-6 font-medium flex relative items-center transition-all duration-300 rounded-lg"
+            >
+              <span className="mr-4 text-lg lg:text-xl">💡 Pro tip:</span>
+              <svg
+                id={arrowId}
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 absolute right-4 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id={dropdownId}
+              className="overflow-hidden transition-all duration-300 max-h-0 opacity-0 py-0 px-0"
+            >
+              <p >{proTipText}</p>
+            </div>
+          </div>
         </motion.div>
         <div className="mt-8 flex gap-4">
           <motion.div
