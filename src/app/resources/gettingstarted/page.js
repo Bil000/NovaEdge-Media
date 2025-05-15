@@ -3,6 +3,9 @@ import HeroSection from "@/app/components/heroSection/herosection"
 import NavBar from "@/app/components/navBar/nav";
 import { motion } from "framer-motion";
 import TwoColumnSection from "@/app/components/TwoColumnSection/TwoColumnSection";
+import CTASection from "@/app/components/finalCTA/finalCTA";
+import testimonials from "@/app/components/testimonials/testimonials";
+import Footer from "@/app/components/footer/footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot } from '@fortawesome/free-solid-svg-icons';
 
@@ -118,7 +121,10 @@ export default function Home () {
             </header>
             <main className="w-full">
               <TwoColumnSection cards={features} />
+              <testimonials />
+              <CTASection/>
             </main>
+            <Footer />
         </>
-    );
+    );                                                                              
 }

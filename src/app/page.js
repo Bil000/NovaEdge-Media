@@ -10,6 +10,7 @@ import NovaEdgeStats from "./components/appresentation/apresentation";
 import HowItWorks from "./components/stepByStep/howitworks";
 import CTASection from "./components/finalCTA/finalCTA";
 import FAQ from "./components/FAQ/FAQ";
+import TrustedPartners from "./components/trustedPartners/trustedPartners";
 import Footer from "./components/footer/footer";
 export default function Home() {
   return (
@@ -27,8 +28,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
-        ></video>
-
+        ></video>'                           '
         {/* Content on top of video */}
         <div className="relative z-10">
           <NavBar />
@@ -48,6 +48,7 @@ export default function Home() {
         <HowItWorks />
         <Testimonials />
         <CTASection />
+        <TrustedPartners />
         <FAQ />
       </main>
       <Footer />  
