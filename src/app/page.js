@@ -48,8 +48,8 @@ export default function Home() {
         <HowItWorks />
         <Testimonials />
         <CTASection />
-        <TrustedPartners />
         <FAQ />
+        <TrustedPartners />
       </main>
       <Footer />  
     </>
